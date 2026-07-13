@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block');
+
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-surface: #FDFCFB;
+  --color-surface-dim: #E5E5EA;
+  --color-surface-bright: #FFFFFF;
+  --color-surface-container-lowest: #FFFFFF;
+  --color-surface-container-low: #F5F5F7;
+  --color-surface-container: #EAEAEA;
+  --color-surface-container-high: #DFDFDF;
+  --color-surface-container-highest: #D5D5D5;
+  
+  --color-on-surface: #1D1D1F;
+  --color-on-surface-variant: #636366;
+  --color-outline: #8E8E93;
+  --color-outline-variant: #D1D1D6;
+  
+  --color-primary: #1D1D1F;
+  --color-on-primary: #FFFFFF;
+  --color-primary-container: #2C2C2E;
+  --color-on-primary-container: #AEAEB2;
+  
+  --color-secondary: #48484A;
+  --color-on-secondary: #FFFFFF;
+  --color-secondary-container: #E5E5EA;
+  --color-on-secondary-container: #48484A;
+  
+  --color-tertiary: #1D1D1F;
+  --color-on-tertiary: #FFFFFF;
+  --color-tertiary-container: #2C2C2E;
+  --color-on-tertiary-container: #AEAEB2;
+  
+  --color-brand-orange: #FF6B00;
+  --color-error: #FF3B30;
+  --color-on-error: #FFFFFF;
+
+  --spacing-margin-desktop: 8%;
+  --width-container-max: 1400px;
+
+  --font-headline-md: "Manrope", sans-serif;
+  --font-headline-lg: "Manrope", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-display-xl: "Manrope", sans-serif;
+  --font-headline-lg-mobile: "Manrope", sans-serif;
+  --font-label-sm: "Inter", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-sans: "Inter", sans-serif;
+
+  --animate-fade-up: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s infinite;
+
+  @keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+}
+
+/* Custom Utilities for Premium Visual Styling */
+@utility texture-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.015;
+  background-image: url("https://www.transparenttextures.com/patterns/p6-mini.png");
+}
+
+@utility cta-shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
+
+@utility trust-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-width: 1px;
+  border-color: var(--color-outline-variant);
+  &:hover {
+    box-shadow: 0 10px 40px -10px rgba(255, 107, 0, 0.15);
+    border-color: var(--color-brand-orange);
+    transform: translateY(-4px);
+  }
+}
+
+@utility divider-stitch {
+  height: 2px;
+  background-image: linear-gradient(to right, var(--color-outline-variant) 50%, rgba(255,255,255,0) 0%);
+  background-size: 10px 2px;
+  background-repeat: repeat-x;
+  opacity: 0.45;
+}
+
+/* Scrollbar customizations */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-dim);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-outline);
+}
+
+/* Lenis Custom Smooth Scroll styling */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis-clean html {
+  scroll-behavior: auto !important;
+}
+.lenis-clean body {
+  overflow: visible !important;
+}
+
+/* Dark Mode Theme Overrides */
+.dark {
+  --color-surface: #0C0C0E;
+  --color-surface-dim: #18181B;
+  --color-surface-bright: #1C1C1E;
+  --color-surface-container-lowest: #0C0C0E;
+  --color-surface-container-low: #18181B;
+  --color-surface-container: #242427;
+  --color-surface-container-high: #2F2F33;
+  --color-surface-container-highest: #3A3A3F;
+
+  --color-on-surface: #F4F4F5;
+  --color-on-surface-variant: #A1A1AA;
+  --color-outline: #71717A;
+  --color-outline-variant: #3F3F46;
+
+  --color-primary: #F4F4F5;
+  --color-on-primary: #09090B;
+  --color-primary-container: #27272A;
+  --color-on-primary-container: #D4D4D8;
+
+  --color-secondary: #D4D4D8;
+  --color-on-secondary: #09090B;
+  --color-secondary-container: #27272A;
+  --color-on-secondary-container: #D4D4D8;
+
+  --color-tertiary: #F4F4F5;
+  --color-on-tertiary: #09090B;
+  --color-tertiary-container: #27272A;
+  --color-on-tertiary-container: #D4D4D8;
+}
+
+body {
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
