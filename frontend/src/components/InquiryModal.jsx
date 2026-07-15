@@ -103,7 +103,7 @@ export default function InquiryModal({ isOpen, onClose, prefilledProduct }) {
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.95, opacity: 0, y: 15 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-lg bg-white dark:bg-neutral-950 rounded-2xl shadow-lg overflow-hidden border border-outline-variant/15 dark:border-neutral-900 z-10"
+            className="relative w-full max-w-lg bg-white dark:bg-neutral-950 rounded-2xl shadow-lg overflow-hidden border border-outline-variant/15 dark:border-neutral-900 z-10 max-h-[90vh] flex flex-col"
           >
             {/* Header */}
             <div className="flex justify-between items-center px-6 py-4.5 border-b border-outline-variant/10 dark:border-neutral-900 bg-surface-container-low dark:bg-neutral-950">
@@ -152,7 +152,7 @@ export default function InquiryModal({ isOpen, onClose, prefilledProduct }) {
               </motion.div>
             ) : (
               /* B2B Form */
-              <form onSubmit={handleSubmit} className="p-6 overflow-y-auto max-h-[75vh] space-y-4 text-left bg-white dark:bg-neutral-950">
+              <form onSubmit={handleSubmit} className="p-6 overflow-y-auto flex-1 space-y-4 text-left bg-white dark:bg-neutral-950">
                 {/* Inputs Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
@@ -165,7 +165,7 @@ export default function InquiryModal({ isOpen, onClose, prefilledProduct }) {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Your full name"
-                      className={`w-full bg-surface dark:bg-neutral-900 border text-sm rounded-xl p-3 text-primary focus:outline-none focus:ring-1 focus:ring-brand-orange ${
+                      className={`w-full bg-surface dark:bg-neutral-900 border text-base sm:text-sm rounded-xl p-3 text-primary focus:outline-none focus:ring-1 focus:ring-brand-orange ${
                         errors.name ? 'border-error' : 'border-outline-variant/30 dark:border-neutral-800'
                       }`}
                     />
@@ -184,7 +184,7 @@ export default function InquiryModal({ isOpen, onClose, prefilledProduct }) {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="e.g. +91 98765 43210"
-                      className={`w-full bg-surface dark:bg-neutral-900 border text-sm rounded-xl p-3 text-primary focus:outline-none focus:ring-1 focus:ring-brand-orange ${
+                      className={`w-full bg-surface dark:bg-neutral-900 border text-base sm:text-sm rounded-xl p-3 text-primary focus:outline-none focus:ring-1 focus:ring-brand-orange ${
                         errors.phone ? 'border-error' : 'border-outline-variant/30 dark:border-neutral-800'
                       }`}
                     />
@@ -204,7 +204,7 @@ export default function InquiryModal({ isOpen, onClose, prefilledProduct }) {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="buyer@distributor.com"
-                    className={`w-full bg-surface dark:bg-neutral-900 border text-sm rounded-xl p-3 text-primary focus:outline-none focus:ring-1 focus:ring-brand-orange ${
+                    className={`w-full bg-surface dark:bg-neutral-900 border text-base sm:text-sm rounded-xl p-3 text-primary focus:outline-none focus:ring-1 focus:ring-brand-orange ${
                       errors.email ? 'border-error' : 'border-outline-variant/30 dark:border-neutral-800'
                     }`}
                   />
@@ -223,7 +223,7 @@ export default function InquiryModal({ isOpen, onClose, prefilledProduct }) {
                     value={formData.businessName}
                     onChange={handleChange}
                     placeholder="Retailer/Distributor Pvt Ltd"
-                    className={`w-full bg-surface dark:bg-neutral-900 border text-sm rounded-xl p-3 text-primary focus:outline-none focus:ring-1 focus:ring-brand-orange ${
+                    className={`w-full bg-surface dark:bg-neutral-900 border text-base sm:text-sm rounded-xl p-3 text-primary focus:outline-none focus:ring-1 focus:ring-brand-orange ${
                       errors.businessName ? 'border-error' : 'border-outline-variant/30 dark:border-neutral-800'
                     }`}
                   />
@@ -241,7 +241,7 @@ export default function InquiryModal({ isOpen, onClose, prefilledProduct }) {
                       name="category"
                       value={formData.category}
                       onChange={handleChange}
-                      className="w-full bg-surface dark:bg-neutral-900 border border-outline-variant/30 dark:border-neutral-800 text-sm rounded-xl p-3 text-primary focus:outline-none focus:ring-1 focus:ring-brand-orange"
+                      className="w-full bg-surface dark:bg-neutral-900 border border-outline-variant/30 dark:border-neutral-800 text-base sm:text-sm rounded-xl p-3 text-primary focus:outline-none focus:ring-1 focus:ring-brand-orange"
                     >
                       <option value="Men">Men's Sneakers</option>
                       <option value="Kids">Kids' Sandals</option>
@@ -283,7 +283,7 @@ export default function InquiryModal({ isOpen, onClose, prefilledProduct }) {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Describe customizations, packaging requirements, target pricing, or sizes needed..."
-                    className="w-full bg-surface dark:bg-neutral-900 border border-outline-variant/30 dark:border-neutral-800 text-sm rounded-xl p-3 text-primary focus:outline-none focus:ring-1 focus:ring-brand-orange"
+                    className="w-full bg-surface dark:bg-neutral-900 border border-outline-variant/30 dark:border-neutral-800 text-base sm:text-sm rounded-xl p-3 text-primary focus:outline-none focus:ring-1 focus:ring-brand-orange"
                   ></textarea>
                 </div>
 

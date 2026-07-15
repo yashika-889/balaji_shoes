@@ -77,6 +77,7 @@ export default function App() {
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
     })
+    window.lenis = lenis
 
     function raf(time) {
       lenis.raf(time)
@@ -87,6 +88,7 @@ export default function App() {
 
     return () => {
       lenis.destroy()
+      window.lenis = null
     }
   }, [])
 
@@ -106,7 +108,11 @@ export default function App() {
 
   // Reset scroll to top on page navigation
   useEffect(() => {
-    window.scrollTo(0, 0)
+    if (window.lenis) {
+      window.lenis.scrollTo(0, { immediate: true })
+    } else {
+      window.scrollTo(0, 0)
+    }
   }, [location.pathname])
 
   const handleToggleTheme = () => {

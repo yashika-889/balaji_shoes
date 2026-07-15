@@ -110,24 +110,24 @@ export default function Contact() {
         </div>
 
         {/* Business Contact Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 mb-16">
           {/* Phone Card */}
-          <div className="bg-white dark:bg-neutral-900 border border-[#ECECEC] dark:border-neutral-800 rounded-2xl p-6.5 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-brand-orange hover:shadow-lg transition-all duration-300 ease-out flex flex-col justify-between">
+          <div className="col-span-1 bg-white dark:bg-neutral-900 border border-[#ECECEC] dark:border-neutral-800 rounded-2xl p-4 sm:p-6.5 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-brand-orange hover:shadow-lg transition-all duration-300 ease-out flex flex-col justify-between">
             <div>
-              <div className="w-12 h-12 bg-brand-orange/10 rounded-xl flex items-center justify-center text-brand-orange mb-6">
-                <Phone className="w-6 h-6" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-brand-orange/10 rounded-xl flex items-center justify-center text-brand-orange mb-4 sm:mb-6">
+                <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
-              <h3 className="font-bold text-lg text-primary dark:text-white mb-2 flex items-center gap-2">
+              <h3 className="font-bold text-sm sm:text-lg text-primary dark:text-white mb-2 flex items-center gap-1 sm:gap-2">
                 ☎ Business Inquiry
               </h3>
-              <p className="text-xl font-black text-brand-orange mt-4 mb-3">
-                <a href="tel:+919811254101" className="hover:underline">+91 98112 54101</a>
+              <p className="text-sm sm:text-xl font-black text-brand-orange mt-2 sm:mt-4 mb-2 sm:mb-3">
+                <a href="tel:+919811254101" className="hover:underline text-xs sm:text-xl">+91 98112 54101</a>
               </p>
             </div>
-            <div className="border-t border-[#ECECEC] dark:border-neutral-800 pt-4 mt-4 text-xs font-semibold text-on-surface-variant dark:text-neutral-400">
-              <div className="flex justify-between items-center">
+            <div className="border-t border-[#ECECEC] dark:border-neutral-800 pt-3 sm:pt-4 mt-3 sm:mt-4 text-[10px] sm:text-xs font-semibold text-on-surface-variant dark:text-neutral-400">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1 sm:gap-0">
                 <span>Mon - Sat</span>
-                <span className="text-primary dark:text-white bg-neutral-100 dark:bg-neutral-800 px-2.5 py-1 rounded-md text-[11px] font-bold">
+                <span className="text-primary dark:text-white bg-neutral-100 dark:bg-neutral-800 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded text-[9px] sm:text-[11px] font-bold">
                   9 AM – 6 PM
                 </span>
               </div>
@@ -135,51 +135,51 @@ export default function Contact() {
           </div>
 
           {/* Email Card */}
-          <div className="bg-white dark:bg-neutral-900 border border-[#ECECEC] dark:border-neutral-800 rounded-2xl p-6.5 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-brand-orange hover:shadow-lg transition-all duration-300 ease-out flex flex-col justify-between">
+          <div className="col-span-1 bg-white dark:bg-neutral-900 border border-[#ECECEC] dark:border-neutral-800 rounded-2xl p-4 sm:p-6.5 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-brand-orange hover:shadow-lg transition-all duration-300 ease-out flex flex-col justify-between">
             <div>
-              <div className="w-12 h-12 bg-brand-orange/10 rounded-xl flex items-center justify-center text-brand-orange mb-6">
-                <Mail className="w-6 h-6" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-brand-orange/10 rounded-xl flex items-center justify-center text-brand-orange mb-4 sm:mb-6">
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
-              <h3 className="font-bold text-lg text-primary dark:text-white mb-2 flex items-center gap-2">
+              <h3 className="font-bold text-sm sm:text-lg text-primary dark:text-white mb-2 flex items-center gap-1 sm:gap-2">
                 ✉ Email
               </h3>
-              <div className="space-y-2 mt-4">
-                <p className="text-sm font-bold text-primary dark:text-neutral-200">
+              <div className="space-y-1 sm:space-y-2 mt-2 sm:mt-4">
+                <p className="text-[10px] sm:text-sm font-bold text-primary dark:text-neutral-200 truncate">
                   <a href="mailto:sales@balajishoes.shop" className="hover:text-brand-orange transition-colors">sales@balajishoes.shop</a>
                 </p>
-                <p className="text-sm font-bold text-primary dark:text-neutral-200">
-                  <a href="mailto:sumitgoel@balajishoes.shop" className="hover:text-brand-orange transition-colors">sumitgoel@balajishoes.shop</a>
+                <p className="text-[10px] sm:text-sm font-bold text-primary dark:text-neutral-200 truncate">
+                  <a href="mailto:sumitgoel@balajishoes.shop" className="hover:text-brand-orange transition-colors text-[9px] sm:text-sm">sumitgoel@balajishoes.shop</a>
                 </p>
               </div>
             </div>
-            <div className="border-t border-[#ECECEC] dark:border-neutral-800 pt-4 mt-4 text-[10px] font-extrabold text-brand-orange uppercase tracking-wider">
-              Average response within 24 hours
+            <div className="border-t border-[#ECECEC] dark:border-neutral-800 pt-3 sm:pt-4 mt-3 sm:mt-4 text-[9px] sm:text-[10px] font-extrabold text-brand-orange uppercase tracking-wider">
+              24 hour response
             </div>
           </div>
 
           {/* Factory Card */}
-          <div className="bg-white dark:bg-neutral-900 border border-[#ECECEC] dark:border-neutral-800 rounded-2xl p-6.5 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-brand-orange hover:shadow-lg transition-all duration-300 ease-out flex flex-col justify-between">
+          <div className="col-span-2 md:col-span-1 bg-white dark:bg-neutral-900 border border-[#ECECEC] dark:border-neutral-800 rounded-2xl p-4 sm:p-6.5 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-brand-orange hover:shadow-lg transition-all duration-300 ease-out flex flex-col justify-between">
             <div>
-              <div className="w-12 h-12 bg-brand-orange/10 rounded-xl flex items-center justify-center text-brand-orange mb-6">
-                <MapPin className="w-6 h-6" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-brand-orange/10 rounded-xl flex items-center justify-center text-brand-orange mb-4 sm:mb-6">
+                <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
-              <h3 className="font-bold text-lg text-primary dark:text-white mb-2 flex items-center gap-2">
+              <h3 className="font-bold text-sm sm:text-lg text-primary dark:text-white mb-2 flex items-center gap-1 sm:gap-2">
                 📍 Factory
               </h3>
-              <p className="text-sm text-on-surface-variant dark:text-neutral-455 leading-relaxed mt-4">
+              <p className="text-[11px] sm:text-sm text-on-surface-variant dark:text-neutral-455 leading-relaxed mt-2 sm:mt-4">
                 Shri Balaji Shoes Private Limited<br />
                 M.I.E. Industrial Area, Part-B,<br />
                 Bahadurgarh, Haryana - 124507
               </p>
             </div>
-            <div className="border-t border-[#ECECEC] dark:border-neutral-800 pt-4 mt-4">
+            <div className="border-t border-[#ECECEC] dark:border-neutral-800 pt-3 sm:pt-4 mt-3 sm:mt-4">
               <a 
                 href="https://www.google.com/maps/dir/?api=1&destination=M.I.E.+Part-B,+Bahadurgarh,+Haryana"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-brand-orange hover:text-brand-orange/80 transition-colors font-bold text-sm flex items-center gap-1 group"
+                className="text-brand-orange hover:text-brand-orange/80 transition-colors font-bold text-xs sm:text-sm flex items-center gap-1 group"
               >
-                View on Google Maps <ArrowRight className="w-4.5 h-4.5 group-hover:translate-x-1 transition-transform" />
+                View on Google Maps <ArrowRight className="w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </div>
@@ -199,16 +199,16 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
             {/* Instagram Card */}
             <a 
               href="https://www.instagram.com/hycrossshoes/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="bg-white dark:bg-neutral-900 border border-[#ECECEC] dark:border-neutral-800 rounded-2xl p-6.5 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-[#E1306C] hover:shadow-[0_12px_30px_rgba(225,48,108,0.1)] transition-all duration-300 ease-out group flex flex-col justify-between"
+              className="col-span-1 bg-white dark:bg-neutral-900 border border-[#ECECEC] dark:border-neutral-800 rounded-2xl p-4 sm:p-6.5 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-[#E1306C] hover:shadow-[0_12px_30px_rgba(225,48,108,0.1)] transition-all duration-300 ease-out group flex flex-col justify-between"
             >
               <div>
-                <div className="w-12 h-12 bg-neutral-100 dark:bg-neutral-800 group-hover:bg-[#E1306C]/10 group-hover:text-[#E1306C] rounded-xl flex items-center justify-center text-on-surface-variant dark:text-neutral-450 mb-6 transition-colors duration-300">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-neutral-100 dark:bg-neutral-800 group-hover:bg-[#E1306C]/10 group-hover:text-[#E1306C] rounded-xl flex items-center justify-center text-on-surface-variant dark:text-neutral-455 mb-4 sm:mb-6 transition-colors duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -219,22 +219,22 @@ export default function Contact() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="w-6 h-6"
+                    className="w-5 h-5 sm:w-6 sm:h-6"
                   >
                     <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                   </svg>
                 </div>
-                <h3 className="font-bold text-lg text-primary dark:text-white mb-2 transition-colors duration-300 group-hover:text-[#E1306C]">
+                <h3 className="font-bold text-sm sm:text-lg text-primary dark:text-white mb-1.5 sm:mb-2 transition-colors duration-300 group-hover:text-[#E1306C]">
                   Follow HYCROSS
                 </h3>
-                <p className="text-sm text-on-surface-variant dark:text-neutral-455 leading-relaxed font-normal">
+                <p className="text-[10px] sm:text-sm text-on-surface-variant dark:text-neutral-455 leading-relaxed font-normal">
                   See product launches, behind-the-scenes, and daily styling inspiration.
                 </p>
               </div>
-              <div className="mt-6 flex items-center gap-1.5 text-sm font-bold text-brand-orange group-hover:text-[#E1306C] transition-colors duration-300">
-                Open Instagram <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <div className="mt-4 sm:mt-6 flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-orange group-hover:text-[#E1306C] transition-colors duration-300">
+                Open Instagram <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </a>
 
@@ -243,10 +243,10 @@ export default function Contact() {
               href="https://www.facebook.com/people/Hycross-Shoes/61551055092057/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="bg-white dark:bg-neutral-900 border border-[#ECECEC] dark:border-neutral-800 rounded-2xl p-6.5 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-[#1877F2] hover:shadow-[0_12px_30px_rgba(24,119,242,0.1)] transition-all duration-300 ease-out group flex flex-col justify-between"
+              className="col-span-1 bg-white dark:bg-neutral-900 border border-[#ECECEC] dark:border-neutral-800 rounded-2xl p-4 sm:p-6.5 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-[#1877F2] hover:shadow-[0_12px_30px_rgba(24,119,242,0.1)] transition-all duration-300 ease-out group flex flex-col justify-between"
             >
               <div>
-                <div className="w-12 h-12 bg-neutral-100 dark:bg-neutral-800 group-hover:bg-[#1877F2]/10 group-hover:text-[#1877F2] rounded-xl flex items-center justify-center text-on-surface-variant dark:text-neutral-450 mb-6 transition-colors duration-300">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-neutral-100 dark:bg-neutral-800 group-hover:bg-[#1877F2]/10 group-hover:text-[#1877F2] rounded-xl flex items-center justify-center text-on-surface-variant dark:text-neutral-455 mb-4 sm:mb-6 transition-colors duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -257,20 +257,20 @@ export default function Contact() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="w-6 h-6"
+                    className="w-5 h-5 sm:w-6 sm:h-6"
                   >
                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                   </svg>
                 </div>
-                <h3 className="font-bold text-lg text-primary dark:text-white mb-2 transition-colors duration-300 group-hover:text-[#1877F2]">
+                <h3 className="font-bold text-sm sm:text-lg text-primary dark:text-white mb-1.5 sm:mb-2 transition-colors duration-300 group-hover:text-[#1877F2]">
                   Community Updates
                 </h3>
-                <p className="text-sm text-on-surface-variant dark:text-neutral-455 leading-relaxed font-normal">
+                <p className="text-[10px] sm:text-sm text-on-surface-variant dark:text-neutral-455 leading-relaxed font-normal">
                   Product announcements, offers, and company news.
                 </p>
               </div>
-              <div className="mt-6 flex items-center gap-1.5 text-sm font-bold text-brand-orange group-hover:text-[#1877F2] transition-colors duration-300">
-                Visit Facebook <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <div className="mt-4 sm:mt-6 flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-orange group-hover:text-[#1877F2] transition-colors duration-300">
+                Visit Facebook <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </a>
 
@@ -279,21 +279,21 @@ export default function Contact() {
               href="https://www.amazon.in/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="bg-white dark:bg-neutral-900 border border-[#ECECEC] dark:border-neutral-800 rounded-2xl p-6.5 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-[#FF9900] hover:shadow-[0_12px_30px_rgba(255,153,0,0.1)] transition-all duration-300 ease-out group flex flex-col justify-between"
+              className="col-span-2 md:col-span-1 bg-white dark:bg-neutral-900 border border-[#ECECEC] dark:border-neutral-800 rounded-2xl p-4 sm:p-6.5 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-[#FF9900] hover:shadow-[0_12px_30px_rgba(255,153,0,0.1)] transition-all duration-300 ease-out group flex flex-col justify-between"
             >
               <div>
-                <div className="w-12 h-12 bg-neutral-100 dark:bg-neutral-800 group-hover:bg-[#FF9900]/10 group-hover:text-[#FF9900] rounded-xl flex items-center justify-center text-on-surface-variant dark:text-neutral-450 mb-6 transition-colors duration-300">
-                  <ShoppingBag className="w-6 h-6" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-neutral-100 dark:bg-neutral-800 group-hover:bg-[#FF9900]/10 group-hover:text-[#FF9900] rounded-xl flex items-center justify-center text-on-surface-variant dark:text-neutral-455 mb-4 sm:mb-6 transition-colors duration-300">
+                  <ShoppingBag className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
-                <h3 className="font-bold text-lg text-primary dark:text-white mb-2 transition-colors duration-300 group-hover:text-[#FF9900]">
+                <h3 className="font-bold text-sm sm:text-lg text-primary dark:text-white mb-1.5 sm:mb-2 transition-colors duration-300 group-hover:text-[#FF9900]">
                   Official Amazon Store
                 </h3>
-                <p className="text-sm text-on-surface-variant dark:text-neutral-455 leading-relaxed font-normal">
+                <p className="text-[10px] sm:text-sm text-on-surface-variant dark:text-neutral-455 leading-relaxed font-normal">
                   Explore verified HYCROSS products, customer reviews and latest launches.
                 </p>
               </div>
-              <div className="mt-6 flex items-center gap-1.5 text-sm font-bold text-brand-orange group-hover:text-[#FF9900] transition-colors duration-300">
-                Visit Amazon Store <ArrowRight className="w-4.5 h-4.5 group-hover:translate-x-1 transition-transform" />
+              <div className="mt-4 sm:mt-6 flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-orange group-hover:text-[#FF9900] transition-colors duration-300">
+                Visit Amazon Store <ArrowRight className="w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 group-hover:translate-x-1 transition-transform" />
               </div>
             </a>
           </div>

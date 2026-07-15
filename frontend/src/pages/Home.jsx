@@ -139,7 +139,7 @@ export default function Home({ onOpenInquiry }) {
       </Helmet>
 
       {/* HERO SECTION */}
-      <section className="relative h-[780px] lg:h-[820px] flex items-center overflow-hidden bg-white dark:bg-neutral-950">
+      <section className="relative min-h-[80vh] sm:min-h-[85vh] lg:min-h-[90vh] py-20 sm:py-28 lg:py-0 flex items-center overflow-hidden bg-white dark:bg-neutral-950">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0 select-none">
           <motion.img
@@ -150,14 +150,14 @@ export default function Home({ onOpenInquiry }) {
             className="absolute top-0 right-[-12%] lg:right-[-10%] w-[125%] lg:w-[120%] h-full max-w-none object-cover filter brightness-[1] dark:brightness-[0.5]"
             src={heroImg}
             loading="eager"
-            fetchpriority="high"
+            fetchPriority="high"
           />
           {/* Warm tinted to transparent gradient for light mode, dark to transparent for dark mode */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,248,242,0.75)_0%,rgba(255,248,242,0.5)_40%,rgba(255,248,242,0.05)_70%,transparent_90%)] dark:bg-[linear-gradient(to_right,rgba(12,12,14,0.75)_0%,rgba(12,12,14,0.5)_40%,rgba(12,12,14,0.05)_70%,transparent_90%)]"></div>
         </div>
 
         <div className="max-w-container-max mx-auto px-4 md:px-margin-desktop relative z-10 w-full">
-          <div className="max-w-[620px] text-left space-y-8">
+          <div className="max-w-[620px] text-left space-y-6 sm:space-y-8">
             {/* Manufacturer Brand Identity Badge */}
             <div className="flex items-center gap-2 border-l-2 border-brand-orange pl-4">
               <span className="text-xs uppercase font-extrabold tracking-widest text-[#FF6B00]">
@@ -170,7 +170,7 @@ export default function Home({ onOpenInquiry }) {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="font-display-xl text-5xl sm:text-6xl md:text-7xl lg:text-[84px] font-black leading-[1.05] tracking-tight text-primary dark:text-white"
+              className="font-display-xl text-4xl sm:text-6xl md:text-7xl lg:text-[84px] font-black leading-[1.05] tracking-tight text-primary dark:text-white"
             >
               Built for <br />
               Everyday <br />
@@ -192,11 +192,11 @@ export default function Home({ onOpenInquiry }) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="flex flex-wrap items-center gap-4 pt-2"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2"
             >
               <Link
                 to="/products"
-                className="bg-brand-orange text-white hover:bg-neutral-950 dark:hover:bg-white dark:hover:text-neutral-950 px-8 py-4.5 font-bold text-base transition-colors duration-300 rounded-xl shadow-md flex items-center gap-2 group cursor-pointer"
+                className="bg-brand-orange text-white hover:bg-neutral-950 dark:hover:bg-white dark:hover:text-neutral-950 px-8 py-4.5 font-bold text-base transition-colors duration-300 rounded-xl shadow-md flex items-center justify-center gap-2 group cursor-pointer w-full sm:w-auto"
               >
                 Explore Collection
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -204,7 +204,7 @@ export default function Home({ onOpenInquiry }) {
 
               <button
                 onClick={() => onOpenInquiry()}
-                className="bg-white/80 dark:bg-neutral-900/80 hover:bg-neutral-100 dark:hover:bg-neutral-800 border border-[#ECECEC] dark:border-neutral-800 text-primary dark:text-white px-8 py-4.5 font-bold text-base transition-colors duration-300 rounded-xl flex items-center justify-center cursor-pointer shadow-sm"
+                className="bg-white/80 dark:bg-neutral-900/80 hover:bg-neutral-100 dark:hover:bg-neutral-800 border border-[#ECECEC] dark:border-neutral-800 text-primary dark:text-white px-8 py-4.5 font-bold text-base transition-colors duration-300 rounded-xl flex items-center justify-center cursor-pointer shadow-sm w-full sm:w-auto"
               >
                 Business Inquiry
               </button>
@@ -215,7 +215,7 @@ export default function Home({ onOpenInquiry }) {
 
       {/* Trust Strip */}
       <div className="bg-white/40 dark:bg-neutral-950/40 border-y border-outline-variant/15 dark:border-neutral-900 backdrop-blur-sm relative z-10 py-5 text-left">
-        <div className="max-w-container-max mx-auto px-4 md:px-margin-desktop flex flex-wrap justify-between items-center gap-y-4 gap-x-6">
+        <div className="max-w-container-max mx-auto px-4 md:px-margin-desktop grid grid-cols-2 gap-4 md:flex md:flex-wrap md:justify-between md:items-center md:gap-y-4 md:gap-x-6">
           {[
             'Indian Footwear Manufacturer',
             'Wholesale & Retail Supply',
@@ -265,16 +265,16 @@ export default function Home({ onOpenInquiry }) {
           </div>
 
           {/* Right Column: Premium Statistics Highlight Cards */}
-          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="lg:col-span-6 grid grid-cols-2 gap-3 sm:gap-4">
             {stats.map((stat, idx) => (
-              <ScrollReveal key={idx} delay={idx * 0.1} className="p-6 bg-surface-container-low dark:bg-neutral-900 rounded-2xl border border-outline-variant/10 dark:border-neutral-800 transition-all duration-300 hover:shadow-md hover:border-brand-orange/30">
-                <div className="font-headline-lg text-2xl sm:text-3xl font-extrabold text-primary mb-1">
+              <ScrollReveal key={idx} delay={idx * 0.1} className="p-4 sm:p-6 bg-surface-container-low dark:bg-neutral-900 rounded-2xl border border-outline-variant/10 dark:border-neutral-800 transition-all duration-300 hover:shadow-md hover:border-brand-orange/30">
+                <div className="font-headline-lg text-lg sm:text-3xl font-extrabold text-primary mb-1 truncate">
                   {stat.value}
                 </div>
-                <div className="text-xs font-bold text-brand-orange uppercase tracking-wider mb-2">
+                <div className="text-[10px] sm:text-xs font-bold text-brand-orange uppercase tracking-wider mb-1.5 sm:mb-2">
                   {stat.label}
                 </div>
-                <p className="text-xs text-on-surface-variant leading-relaxed">
+                <p className="text-[10px] sm:text-xs text-on-surface-variant leading-relaxed">
                   {stat.desc}
                 </p>
               </ScrollReveal>
@@ -306,7 +306,7 @@ export default function Home({ onOpenInquiry }) {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {categories.map((cat, idx) => (
               <ScrollReveal key={idx} delay={idx * 0.1}>
                 <Link
@@ -321,11 +321,11 @@ export default function Home({ onOpenInquiry }) {
                       loading="lazy"
                     />
                   </div>
-                  <div className="p-6">
-                    <h3 className="font-headline-md text-lg font-bold text-primary group-hover:text-brand-orange transition-colors">
+                  <div className="p-3 sm:p-6">
+                    <h3 className="font-headline-md text-sm sm:text-lg font-bold text-primary group-hover:text-brand-orange transition-colors">
                       {cat.title}
                     </h3>
-                    <p className="text-xs text-on-surface-variant mt-1.5 leading-relaxed">
+                    <p className="text-[10px] sm:text-xs text-on-surface-variant mt-1 sm:mt-1.5 leading-relaxed line-clamp-2">
                       {cat.desc}
                     </p>
                   </div>
@@ -371,96 +371,96 @@ export default function Home({ onOpenInquiry }) {
           </div>
 
           {/* Asymmetrical Premium B2B Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-8">
             {/* 1. Quality Manufacturing (Featured - spans 8 columns) */}
-            <ScrollReveal className="lg:col-span-8 p-8 md:p-10 bg-white dark:bg-neutral-900 rounded-[20px] border border-[#ECECEC] dark:border-neutral-800 transition-all duration-300 hover:shadow-md hover:border-[#FF6B00] group flex flex-col md:flex-row gap-6 items-start">
-              <div className="w-14 h-14 bg-[#FF6B00]/5 text-brand-orange flex items-center justify-center rounded-full shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                <Award className="w-7 h-7" />
+            <ScrollReveal className="col-span-2 lg:col-span-8 p-4 sm:p-8 md:p-10 bg-white dark:bg-neutral-900 rounded-[20px] border border-[#ECECEC] dark:border-neutral-800 transition-all duration-300 hover:shadow-md hover:border-[#FF6B00] group flex flex-col md:flex-row gap-4 sm:gap-6 items-start">
+              <div className="w-10 h-10 sm:w-14 sm:h-14 bg-[#FF6B00]/5 text-brand-orange flex items-center justify-center rounded-full shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                <Award className="w-5 h-5 sm:w-7 sm:h-7" />
               </div>
-              <div className="space-y-3">
-                <span className="text-[10px] uppercase font-extrabold tracking-widest text-brand-orange">
+              <div className="space-y-2 sm:space-y-3">
+                <span className="text-[9px] sm:text-[10px] uppercase font-extrabold tracking-widest text-brand-orange">
                   Core Competence
                 </span>
-                <h3 className="font-headline-lg text-xl sm:text-2xl font-extrabold text-primary">
+                <h3 className="font-headline-lg text-base sm:text-xl md:text-2xl font-extrabold text-primary">
                   Quality Footwear Manufacturing
                 </h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed">
+                <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
                   We operate advanced production lines utilizing double-knit breathable mesh, high-grade phylon midsoles, and custom EVA contours. Every batch undergoes strict quality assurance tests to ensure retail-ready durability and lasting comfort.
                 </p>
               </div>
             </ScrollReveal>
 
             {/* 2. Reliable Supply Chain (spans 4 columns) */}
-            <ScrollReveal delay={0.05} className="lg:col-span-4 p-8 bg-white dark:bg-neutral-900 rounded-[20px] border border-[#ECECEC] dark:border-neutral-800 transition-all duration-300 hover:shadow-md hover:border-[#FF6B00] group flex flex-col justify-between space-y-6">
-              <div className="w-12 h-12 bg-[#FF6B00]/5 text-brand-orange flex items-center justify-center rounded-full shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                <Truck className="w-6 h-6" />
+            <ScrollReveal delay={0.05} className="col-span-1 lg:col-span-4 p-4 sm:p-8 bg-white dark:bg-neutral-900 rounded-[20px] border border-[#ECECEC] dark:border-neutral-800 transition-all duration-300 hover:shadow-md hover:border-[#FF6B00] group flex flex-col justify-between gap-4 sm:gap-6">
+              <div className="w-8 h-8 sm:w-12 sm:h-12 bg-[#FF6B00]/5 text-brand-orange flex items-center justify-center rounded-full shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                <Truck className="w-4 h-4 sm:w-6 sm:h-6" />
               </div>
-              <div className="space-y-2">
-                <h3 className="font-headline-md text-lg font-bold text-primary">
+              <div className="space-y-1.5 sm:space-y-2">
+                <h3 className="font-headline-md text-sm sm:text-lg font-bold text-primary">
                   Reliable Supply Chain
                 </h3>
-                <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                <p className="text-[10px] sm:text-xs sm:text-sm text-on-surface-variant leading-relaxed">
                   Centrally manufactured in the Bahadurgarh hub to ensure uninterrupted supply and predictable shipping schedules across India.
                 </p>
               </div>
             </ScrollReveal>
 
             {/* 3. Comfort-Driven Design (spans 4 columns) */}
-            <ScrollReveal delay={0.1} className="lg:col-span-4 p-8 bg-white dark:bg-neutral-900 rounded-[20px] border border-[#ECECEC] dark:border-neutral-800 transition-all duration-300 hover:shadow-md hover:border-[#FF6B00] group flex flex-col justify-between space-y-6">
-              <div className="w-12 h-12 bg-[#FF6B00]/5 text-brand-orange flex items-center justify-center rounded-full shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                <Heart className="w-6 h-6" />
+            <ScrollReveal delay={0.1} className="col-span-1 lg:col-span-4 p-4 sm:p-8 bg-white dark:bg-neutral-900 rounded-[20px] border border-[#ECECEC] dark:border-neutral-800 transition-all duration-300 hover:shadow-md hover:border-[#FF6B00] group flex flex-col justify-between gap-4 sm:gap-6">
+              <div className="w-8 h-8 sm:w-12 sm:h-12 bg-[#FF6B00]/5 text-brand-orange flex items-center justify-center rounded-full shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                <Heart className="w-4 h-4 sm:w-6 sm:h-6" />
               </div>
-              <div className="space-y-2">
-                <h3 className="font-headline-md text-lg font-bold text-primary">
+              <div className="space-y-1.5 sm:space-y-2">
+                <h3 className="font-headline-md text-sm sm:text-lg font-bold text-primary">
                   Comfort-Driven Design
                 </h3>
-                <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                <p className="text-[10px] sm:text-xs sm:text-sm text-on-surface-variant leading-relaxed">
                   Engineered specifically for everyday movement, light travel, and daily commutes. Footwear that moves naturally with the feet.
                 </p>
               </div>
             </ScrollReveal>
 
             {/* 4. Wholesale Expertise (spans 4 columns) */}
-            <ScrollReveal delay={0.15} className="lg:col-span-4 p-8 bg-white dark:bg-neutral-900 rounded-[20px] border border-[#ECECEC] dark:border-neutral-800 transition-all duration-300 hover:shadow-md hover:border-[#FF6B00] group flex flex-col justify-between space-y-6">
-              <div className="w-12 h-12 bg-[#FF6B00]/5 text-brand-orange flex items-center justify-center rounded-full shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                <Zap className="w-6 h-6" />
+            <ScrollReveal delay={0.15} className="col-span-1 lg:col-span-4 p-4 sm:p-8 bg-white dark:bg-neutral-900 rounded-[20px] border border-[#ECECEC] dark:border-neutral-800 transition-all duration-300 hover:shadow-md hover:border-[#FF6B00] group flex flex-col justify-between gap-4 sm:gap-6">
+              <div className="w-8 h-8 sm:w-12 sm:h-12 bg-[#FF6B00]/5 text-brand-orange flex items-center justify-center rounded-full shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                <Zap className="w-4 h-4 sm:w-6 sm:h-6" />
               </div>
-              <div className="space-y-2">
-                <h3 className="font-headline-md text-lg font-bold text-primary">
+              <div className="space-y-1.5 sm:space-y-2">
+                <h3 className="font-headline-md text-sm sm:text-lg font-bold text-primary">
                   Wholesale Expertise
                 </h3>
-                <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                <p className="text-[10px] sm:text-xs sm:text-sm text-on-surface-variant leading-relaxed">
                   Customizable order runs, transparent B2B price points, and standardized packaging formats tailored for wholesale distribution.
                 </p>
               </div>
             </ScrollReveal>
 
             {/* 5. Consistent Production (spans 4 columns) */}
-            <ScrollReveal delay={0.2} className="lg:col-span-4 p-8 bg-white dark:bg-neutral-900 rounded-[20px] border border-[#ECECEC] dark:border-neutral-800 transition-all duration-300 hover:shadow-md hover:border-[#FF6B00] group flex flex-col justify-between space-y-6">
-              <div className="w-12 h-12 bg-[#FF6B00]/5 text-brand-orange flex items-center justify-center rounded-full shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                <ShieldCheck className="w-6 h-6" />
+            <ScrollReveal delay={0.2} className="col-span-1 lg:col-span-4 p-4 sm:p-8 bg-white dark:bg-neutral-900 rounded-[20px] border border-[#ECECEC] dark:border-neutral-800 transition-all duration-300 hover:shadow-md hover:border-[#FF6B00] group flex flex-col justify-between gap-4 sm:gap-6">
+              <div className="w-8 h-8 sm:w-12 sm:h-12 bg-[#FF6B00]/5 text-brand-orange flex items-center justify-center rounded-full shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                <ShieldCheck className="w-4 h-4 sm:w-6 sm:h-6" />
               </div>
-              <div className="space-y-2">
-                <h3 className="font-headline-md text-lg font-bold text-primary">
+              <div className="space-y-1.5 sm:space-y-2">
+                <h3 className="font-headline-md text-sm sm:text-lg font-bold text-primary">
                   Consistent Production
                 </h3>
-                <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                <p className="text-[10px] sm:text-xs sm:text-sm text-on-surface-variant leading-relaxed">
                   Standardized sizing specifications, precise colorways, and exact replication of approved product line prototypes.
                 </p>
               </div>
             </ScrollReveal>
 
             {/* 6. Trusted Business Partner (spans 12 columns full width) */}
-            <ScrollReveal delay={0.25} className="lg:col-span-12 p-8 md:p-10 bg-white dark:bg-neutral-900 rounded-[20px] border border-[#ECECEC] dark:border-neutral-800 transition-all duration-300 hover:shadow-md hover:border-[#FF6B00] group flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
-              <div className="flex gap-6 items-start md:items-center">
-                <div className="w-12 h-12 bg-[#FF6B00]/5 text-brand-orange flex items-center justify-center rounded-full shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                  <Sparkles className="w-6 h-6" />
+            <ScrollReveal delay={0.25} className="col-span-2 lg:col-span-12 p-4 sm:p-8 md:p-10 bg-white dark:bg-neutral-900 rounded-[20px] border border-[#ECECEC] dark:border-neutral-800 transition-all duration-300 hover:shadow-md hover:border-[#FF6B00] group flex flex-col md:flex-row gap-4 sm:gap-6 items-start md:items-center justify-between">
+              <div className="flex gap-4 sm:gap-6 items-start md:items-center">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#FF6B00]/5 text-brand-orange flex items-center justify-center rounded-full shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                  <Sparkles className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div className="space-y-1 text-left">
-                  <h3 className="font-headline-md text-lg font-bold text-primary">
+                  <h3 className="font-headline-md text-sm sm:text-lg font-bold text-primary">
                     Transparent & Trusted Business Partnership
                   </h3>
-                  <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed max-w-3xl">
+                  <p className="text-[10px] sm:text-xs sm:text-sm text-on-surface-variant leading-relaxed max-w-3xl">
                     We prioritize corporate integrity, prompt communication, and long-term contract reliability. Over 300+ distributors and retailers trust our production capacity to supply high-demand retail items across India.
                   </p>
                 </div>
@@ -521,35 +521,35 @@ export default function Home({ onOpenInquiry }) {
           </div>
 
           {/* Six Connected Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 text-left">
             {steps.map((step, idx) => {
               const Icon = step.icon
               return (
                 <ScrollReveal
                   key={idx}
                   delay={idx * 0.05}
-                  className="p-8 bg-neutral-900/40 rounded-[20px] border border-neutral-800 hover:border-brand-orange/40 hover:bg-neutral-900/70 transition-all duration-300 group shadow-lg hover:shadow-2xl relative overflow-hidden flex flex-col justify-between min-h-[220px]"
+                  className="p-4 sm:p-8 bg-neutral-900/40 rounded-[20px] border border-neutral-800 hover:border-brand-orange/40 hover:bg-neutral-900/70 transition-all duration-300 group shadow-lg hover:shadow-2xl relative overflow-hidden flex flex-col justify-between min-h-[160px] sm:min-h-[220px]"
                 >
                   {/* Big Number Watermark */}
-                  <div className="absolute -right-4 -bottom-6 text-8xl font-black text-white/[0.015] group-hover:text-brand-orange/[0.035] select-none transition-colors duration-300">
+                  <div className="absolute -right-4 -bottom-6 text-6xl sm:text-8xl font-black text-white/[0.015] group-hover:text-brand-orange/[0.035] select-none transition-colors duration-300">
                     {step.num}
                   </div>
 
-                  <div className="space-y-4 relative z-10">
+                  <div className="space-y-3 sm:space-y-4 relative z-10">
                     <div className="flex items-center justify-between">
-                      <div className="w-12 h-12 bg-brand-orange/10 text-brand-orange flex items-center justify-center rounded-xl group-hover:scale-110 transition-transform duration-300">
-                        <Icon className="w-6 h-6" />
+                      <div className="w-8 h-8 sm:w-12 sm:h-12 bg-brand-orange/10 text-brand-orange flex items-center justify-center rounded-xl group-hover:scale-110 transition-transform duration-300">
+                        <Icon className="w-4 h-4 sm:w-6 sm:h-6" />
                       </div>
-                      <span className="text-xs uppercase font-extrabold tracking-widest text-brand-orange/60 group-hover:text-brand-orange transition-colors">
+                      <span className="text-[9px] sm:text-xs uppercase font-extrabold tracking-widest text-brand-orange/60 group-hover:text-brand-orange transition-colors">
                         Stage {step.num}
                       </span>
                     </div>
 
-                    <div className="space-y-2">
-                      <h3 className="font-headline-md text-lg font-bold text-white">
+                    <div className="space-y-1 sm:space-y-2">
+                      <h3 className="font-headline-md text-sm sm:text-lg font-bold text-white">
                         {step.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-white/70 leading-relaxed max-w-[280px]">
+                      <p className="text-[10px] sm:text-xs sm:text-sm text-white/70 leading-relaxed max-w-[280px] line-clamp-3">
                         {step.desc}
                       </p>
                     </div>
@@ -624,7 +624,7 @@ export default function Home({ onOpenInquiry }) {
 
       {/* B2B FAQ */}
       <section className="py-20 md:py-28 px-4 md:px-margin-desktop bg-surface-container-low/20">
-        <div className="max-w-3xl mx-auto text-left space-y-12">
+        <div className="max-w-container-max mx-auto text-left space-y-12">
           <div className="text-center space-y-3">
             <span className="text-xs uppercase font-extrabold tracking-widest text-brand-orange">
               B2B Information
@@ -634,16 +634,16 @@ export default function Home({ onOpenInquiry }) {
             </h2>
           </div>
 
-          <div className="space-y-4">
+          <div className="grid grid-cols-2 gap-4 lg:grid-cols-2 lg:gap-6 text-left">
             {faqs.map((faq, idx) => (
-              <ScrollReveal key={idx} delay={idx * 0.05} className="p-6 bg-white dark:bg-neutral-950 rounded-xl border border-outline-variant/20 dark:border-neutral-800">
-                <div className="flex items-start gap-4">
-                  <HelpCircle className="w-5 h-5 text-brand-orange shrink-0 mt-0.5" />
+              <ScrollReveal key={idx} delay={idx * 0.05} className="p-4 sm:p-6 bg-white dark:bg-neutral-950 rounded-xl border border-outline-variant/20 dark:border-neutral-800 h-full">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <HelpCircle className="w-4 h-4 sm:w-5 sm:h-5 text-brand-orange shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-bold text-base sm:text-lg text-primary mb-2">
+                    <h4 className="font-bold text-xs sm:text-base md:text-lg text-primary mb-1.5 sm:mb-2">
                       {faq.q}
                     </h4>
-                    <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                    <p className="text-[10px] sm:text-xs sm:text-sm text-on-surface-variant leading-relaxed">
                       {faq.a}
                     </p>
                   </div>

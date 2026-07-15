@@ -223,9 +223,9 @@ export default function Products() {
         {/* Catalog Showcase Grid */}
         {isLoading ? (
           // Skeleton loading grid
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             {Array.from({ length: 6 }).map((_, idx) => (
-              <div key={idx} className="h-[480px]">
+              <div key={idx} className="h-[320px] sm:h-[480px]">
                 <SkeletonLoader />
               </div>
             ))}
@@ -234,7 +234,7 @@ export default function Products() {
           <div className="space-y-8">
             <motion.div
               layout
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8"
             >
               <AnimatePresence mode="popLayout">
                 {paginatedProducts.map((product) => {
@@ -259,48 +259,48 @@ export default function Products() {
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                           loading="lazy"
                         />
-                        <div className="absolute top-4 left-4 flex gap-2">
-                          <span className="bg-brand-orange/15 text-brand-orange border border-brand-orange/20 text-[10px] uppercase tracking-wider font-extrabold px-2.5 py-1 rounded-md">
+                        <div className="absolute top-2 left-2 sm:top-4 sm:left-4 flex gap-1 sm:gap-2">
+                          <span className="bg-brand-orange/15 text-brand-orange border border-brand-orange/20 text-[8px] sm:text-[10px] uppercase tracking-wider font-extrabold px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-md">
                             {product.brand}
                           </span>
-                          <span className="bg-neutral-100 dark:bg-neutral-800 text-on-surface-variant dark:text-neutral-300 text-[10px] uppercase tracking-wider font-bold px-2.5 py-1 rounded-md">
+                          <span className="bg-neutral-100 dark:bg-neutral-800 text-on-surface-variant dark:text-neutral-300 text-[8px] sm:text-[10px] uppercase tracking-wider font-bold px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-md">
                             {product.series}
                           </span>
                         </div>
                       </div>
 
                       {/* Body Content */}
-                      <div className="p-6 flex-1 flex flex-col justify-between">
+                      <div className="p-3 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
                           {/* Stars rating & Model Name row */}
-                          <div className="flex justify-between items-baseline mb-2">
-                            <h3 className="font-headline-md text-lg font-bold text-primary dark:text-white group-hover:text-brand-orange transition-colors">
+                          <div className="flex flex-col min-[380px]:flex-row justify-between items-start min-[380px]:items-baseline gap-1 mb-1 sm:mb-2">
+                            <h3 className="font-headline-md text-xs sm:text-base md:text-lg font-bold text-primary dark:text-white group-hover:text-brand-orange transition-colors">
                               {displayNames.mainName}
                             </h3>
-                            <span className="text-xs font-semibold text-on-surface-variant dark:text-neutral-450">
+                            <span className="text-[10px] sm:text-xs font-semibold text-on-surface-variant dark:text-neutral-455">
                               {displayNames.modelName}
                             </span>
                           </div>
 
                           {/* Ratings row */}
-                          <div className="mb-3">
+                          <div className="mb-2 sm:mb-3">
                             {renderStars(rating)}
                           </div>
 
                           {/* Subtitle / category description */}
-                          <span className="text-[11px] font-bold uppercase tracking-wider text-brand-orange">
+                          <span className="text-[9px] sm:text-[11px] font-bold uppercase tracking-wider text-brand-orange">
                             {displayNames.subtitle}
                           </span>
 
                           {/* Description - exact 2 lines */}
-                          <p className="text-on-surface-variant dark:text-neutral-455 text-xs sm:text-sm line-clamp-2 min-h-[40px] leading-relaxed mt-2.5 mb-4">
+                          <p className="hidden sm:block text-on-surface-variant dark:text-neutral-455 text-xs sm:text-sm line-clamp-2 min-h-[40px] leading-relaxed mt-2.5 mb-4">
                             {product.description}
                           </p>
                         </div>
 
-                        <div>
+                        <div className="mt-3">
                           {/* Technical Specs Emoji List inside dashed borders */}
-                          <div className="border-t border-dashed border-[#ECECEC] dark:border-neutral-800/80 pt-4 pb-4 mb-4 text-xs space-y-2">
+                          <div className="hidden sm:block border-t border-dashed border-[#ECECEC] dark:border-neutral-800/80 pt-4 pb-4 mb-4 text-xs space-y-2">
                             {product.features.slice(0, 3).map((feat, fidx) => (
                               <div key={fidx} className="flex items-center gap-2 text-on-surface dark:text-neutral-350 font-medium">
                                 <span>{getSpecEmojis(feat)}</span>
@@ -309,7 +309,7 @@ export default function Products() {
                           </div>
 
                           {/* MOQ wholesale highlights at the bottom */}
-                          <div className="flex justify-between items-center py-2.5 px-3 bg-brand-orange/5 border border-brand-orange/10 rounded-xl text-xs font-bold text-brand-orange mb-4">
+                          <div className="flex flex-col min-[380px]:flex-row justify-between items-start min-[380px]:items-center py-1.5 px-2 sm:py-2.5 sm:px-3 bg-brand-orange/5 border border-brand-orange/10 rounded-lg sm:rounded-xl text-[10px] sm:text-xs font-bold text-brand-orange mb-3 sm:mb-4 gap-1">
                             <span>MOQ: {product.moq}</span>
                             <span className="flex items-center gap-1">✔ Wholesale</span>
                           </div>
@@ -317,10 +317,10 @@ export default function Products() {
                           {/* Action CTA */}
                           <Link
                             to={`/products/${product.slug}`}
-                            className="w-full py-3.5 bg-neutral-50 hover:bg-brand-orange dark:bg-neutral-800/60 dark:hover:bg-brand-orange border border-[#ECECEC] dark:border-neutral-850 hover:border-brand-orange dark:hover:border-brand-orange text-primary hover:text-white dark:text-neutral-300 dark:hover:text-white font-bold rounded-xl text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 group/btn"
+                            className="w-full py-2.5 sm:py-3.5 bg-neutral-50 hover:bg-brand-orange dark:bg-neutral-800/60 dark:hover:bg-brand-orange border border-[#ECECEC] dark:border-neutral-850 hover:border-brand-orange dark:hover:border-brand-orange text-primary hover:text-white dark:text-neutral-300 dark:hover:text-white font-bold rounded-lg sm:rounded-xl text-[10px] sm:text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 group/btn"
                           >
                             View Product
-                            <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover/btn:translate-x-1 transition-transform" />
                           </Link>
                         </div>
                       </div>
@@ -344,7 +344,7 @@ export default function Products() {
                     </h2>
                   </div>
                   
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left max-w-2xl md:border-l md:border-white/10 md:pl-8">
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-left max-w-2xl md:border-l md:border-white/10 md:pl-8">
                     <div className="text-xs text-neutral-350">
                       <strong className="text-white block mb-1 text-sm font-semibold">Comfort-First</strong>
                       Ergonomically engineered for prolonged daily standing and walking.
@@ -372,14 +372,14 @@ export default function Products() {
 
             {/* Pagination controls block */}
             {totalPages > 1 && (
-              <div className="flex justify-center items-center gap-2 mt-16">
+              <div className="flex justify-center items-center gap-1.5 sm:gap-2 mt-16">
                 <button 
                   onClick={() => {
                     setCurrentPage(prev => Math.max(prev - 1, 1))
                     window.scrollTo({ top: 400, behavior: 'smooth' })
                   }}
                   disabled={currentPage === 1}
-                  className="px-4 py-2.5 rounded-xl border border-[#ECECEC] dark:border-neutral-800 bg-white dark:bg-neutral-900 text-xs font-bold uppercase tracking-wider text-on-surface-variant dark:text-neutral-350 hover:border-brand-orange disabled:opacity-50 disabled:hover:border-[#ECECEC] disabled:cursor-not-allowed transition-colors cursor-pointer"
+                  className="px-2.5 py-2 sm:px-4 sm:py-2.5 rounded-xl border border-[#ECECEC] dark:border-neutral-800 bg-white dark:bg-neutral-900 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-on-surface-variant dark:text-neutral-350 hover:border-brand-orange disabled:opacity-50 disabled:hover:border-[#ECECEC] disabled:cursor-not-allowed transition-colors cursor-pointer"
                 >
                   Previous
                 </button>
@@ -391,7 +391,7 @@ export default function Products() {
                       setCurrentPage(i + 1)
                       window.scrollTo({ top: 400, behavior: 'smooth' })
                     }}
-                    className={`w-10 h-10 rounded-xl text-xs font-extrabold transition-all duration-300 cursor-pointer ${
+                    className={`w-8 h-8 sm:w-10 sm:h-10 rounded-xl text-[10px] sm:text-xs font-extrabold transition-all duration-300 cursor-pointer ${
                       currentPage === i + 1
                         ? 'bg-brand-orange text-white shadow-sm'
                         : 'bg-white dark:bg-neutral-900 border border-[#ECECEC] dark:border-neutral-800 text-on-surface-variant dark:text-neutral-350 hover:border-brand-orange hover:text-brand-orange'
@@ -407,7 +407,7 @@ export default function Products() {
                     window.scrollTo({ top: 400, behavior: 'smooth' })
                   }}
                   disabled={currentPage === totalPages}
-                  className="px-4 py-2.5 rounded-xl border border-[#ECECEC] dark:border-neutral-800 bg-white dark:bg-neutral-900 text-xs font-bold uppercase tracking-wider text-on-surface-variant dark:text-neutral-350 hover:border-brand-orange disabled:opacity-50 disabled:hover:border-[#ECECEC] disabled:cursor-not-allowed transition-colors cursor-pointer"
+                  className="px-2.5 py-2 sm:px-4 sm:py-2.5 rounded-xl border border-[#ECECEC] dark:border-neutral-800 bg-white dark:bg-neutral-900 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-on-surface-variant dark:text-neutral-350 hover:border-brand-orange disabled:opacity-50 disabled:hover:border-[#ECECEC] disabled:cursor-not-allowed transition-colors cursor-pointer"
                 >
                   Next →
                 </button>

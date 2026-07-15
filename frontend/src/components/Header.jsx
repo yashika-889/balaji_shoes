@@ -32,7 +32,7 @@ export default function Header({ isDarkMode, onToggleTheme, onOpenInquiry }) {
     { to: '/contact', label: 'Contact' },
   ]
 
-  const isTransparent = isHomePage && !isScrolled
+  const isTransparent = isHomePage && !isScrolled && !isMobileMenuOpen
 
   return (
     <nav
@@ -46,15 +46,15 @@ export default function Header({ isDarkMode, onToggleTheme, onOpenInquiry }) {
         {/* Brand Logo */}
         <Link
           to="/"
-          className="font-headline-md text-lg md:text-xl font-black tracking-tight text-primary flex items-center gap-2 group"
+          className="font-headline-md text-sm min-[360px]:text-base sm:text-lg md:text-xl font-black tracking-tight text-primary flex items-center gap-1.5 sm:gap-2 group shrink-0"
         >
           {/* Stylized electric lightning symbol */}
-          <div className="w-8 h-8 rounded-lg bg-primary dark:bg-white flex items-center justify-center text-brand-orange group-hover:scale-105 transition-transform duration-300">
+          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-primary dark:bg-white flex items-center justify-center text-brand-orange group-hover:scale-105 transition-transform duration-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
               viewBox="0 0 24 24"
-              className="w-5 h-5"
+              className="w-4 h-4 sm:w-5 sm:h-5"
             >
               <path d="M13 10V2L4 14h7v8l9-12h-7z" />
             </svg>
@@ -91,14 +91,14 @@ export default function Header({ isDarkMode, onToggleTheme, onOpenInquiry }) {
         </div>
 
         {/* Utilities & CTA Button */}
-        <div className="flex items-center gap-x-3 md:gap-x-5">
+        <div className="flex items-center gap-x-2 sm:gap-x-3 md:gap-x-5">
           {/* Dark Mode Toggle */}
           <button
             onClick={onToggleTheme}
-            className="p-2.5 rounded-xl bg-surface-container-low dark:bg-neutral-900 border border-outline-variant/10 hover:border-brand-orange/30 text-on-surface-variant hover:text-primary transition-colors cursor-pointer"
+            className="p-2 sm:p-2.5 rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container-low dark:hover:bg-neutral-900 transition-colors cursor-pointer"
             aria-label="Toggle theme"
           >
-            {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            {isDarkMode ? <Sun className="w-4.5 h-4.5" /> : <Moon className="w-4.5 h-4.5" />}
           </button>
 
           {/* Business Inquiry CTA */}
@@ -112,17 +112,17 @@ export default function Header({ isDarkMode, onToggleTheme, onOpenInquiry }) {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2.5 rounded-xl bg-surface-container-low dark:bg-neutral-900 border border-outline-variant/10 text-on-surface-variant hover:text-primary cursor-pointer"
+            className="md:hidden p-2 sm:p-2.5 rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container-low dark:hover:bg-neutral-900 transition-colors cursor-pointer"
             aria-label="Menu"
           >
-            {isMobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+            {isMobileMenuOpen ? <X className="w-4.5 h-4.5" /> : <Menu className="w-4.5 h-4.5" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Drawer Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-x-0 top-[67px] bottom-0 bg-surface/98 dark:bg-neutral-950/98 backdrop-blur-md z-45 flex flex-col justify-between p-6 border-t border-outline-variant/15 dark:border-neutral-900 animate-fade-up">
+        <div className="md:hidden absolute inset-x-0 top-full h-[calc(100vh-100%)] bg-surface/98 dark:bg-neutral-950/98 backdrop-blur-md z-45 flex flex-col justify-between p-6 border-t border-outline-variant/15 dark:border-neutral-900 animate-fade-up overflow-y-auto">
           <div className="flex flex-col gap-y-5 text-lg font-bold mt-4">
             {navLinks.map((link) => (
               <NavLink
@@ -139,7 +139,7 @@ export default function Header({ isDarkMode, onToggleTheme, onOpenInquiry }) {
             ))}
           </div>
 
-          <div className="flex flex-col gap-y-4 mb-16">
+          <div className="flex flex-col gap-y-4 mt-8 mb-8">
             <button
               onClick={() => {
                 setIsMobileMenuOpen(false)

@@ -216,19 +216,19 @@ export default function ProductDetails({ onOpenInquiry }) {
                 Wholesale Specifications
               </h4>
               <div className="divide-y divide-outline-variant/15 dark:divide-neutral-900 border border-outline-variant/20 dark:border-neutral-850 rounded-2xl overflow-hidden bg-white dark:bg-neutral-950">
-                <div className="grid grid-cols-3 p-4 text-xs sm:text-sm">
+                <div className="grid grid-cols-3 gap-2 p-4 text-xs sm:text-sm">
                   <div className="text-on-surface-variant font-bold">Category</div>
                   <div className="col-span-2 text-primary font-medium">{product.category} Footwear</div>
                 </div>
-                <div className="grid grid-cols-3 p-4 text-xs sm:text-sm">
+                <div className="grid grid-cols-3 gap-2 p-4 text-xs sm:text-sm">
                   <div className="text-on-surface-variant font-bold">Standard Sizing</div>
                   <div className="col-span-2 text-primary font-medium">{product.sizes}</div>
                 </div>
-                <div className="grid grid-cols-3 p-4 text-xs sm:text-sm">
+                <div className="grid grid-cols-3 gap-2 p-4 text-xs sm:text-sm">
                   <div className="text-on-surface-variant font-bold">Composition</div>
                   <div className="col-span-2 text-primary font-medium">{product.material}</div>
                 </div>
-                <div className="grid grid-cols-3 p-4 text-xs sm:text-sm">
+                <div className="grid grid-cols-3 gap-2 p-4 text-xs sm:text-sm">
                   <div className="text-on-surface-variant font-bold">Minimum Order (MOQ)</div>
                   <div className="col-span-2 text-brand-orange font-bold">{product.moq}</div>
                 </div>
@@ -274,11 +274,11 @@ export default function ProductDetails({ onOpenInquiry }) {
             <h3 className="font-headline-lg text-2xl font-bold text-primary mb-10 text-left">
               Suggested B2B Products
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="flex overflow-x-auto pb-4 gap-6 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:gap-8">
               {related.map((item) => (
                 <div
                   key={item.id}
-                  className="bg-white dark:bg-neutral-950 border border-outline-variant/15 dark:border-neutral-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col group"
+                  className="w-[280px] shrink-0 lg:w-auto bg-white dark:bg-neutral-950 border border-outline-variant/15 dark:border-neutral-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col group"
                 >
                   <div className="relative aspect-[4/3] bg-neutral-100 dark:bg-neutral-900 overflow-hidden">
                     <BlurImage
