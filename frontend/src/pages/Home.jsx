@@ -139,7 +139,7 @@ export default function Home({ onOpenInquiry }) {
       </Helmet>
 
       {/* HERO SECTION */}
-      <section className="relative min-h-[80vh] sm:min-h-[85vh] lg:min-h-[90vh] py-20 sm:py-28 lg:py-0 flex items-center overflow-hidden bg-white dark:bg-neutral-950">
+      <section className="relative min-h-[80vh] sm:min-h-[85vh] lg:min-h-[90vh] pt-28 pb-20 sm:pt-36 sm:pb-28 lg:pt-40 lg:pb-32 flex items-center overflow-hidden bg-white dark:bg-neutral-950">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0 select-none">
           <motion.img
