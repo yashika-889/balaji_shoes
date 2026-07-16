@@ -276,7 +276,7 @@ export default function Contact() {
 
             {/* Amazon Store Card */}
             <a 
-              href="https://www.amazon.in/" 
+              href="https://www.amazon.in/stores/page/DBE02ED0-DA01-43D4-B559-002662A0E73E?ingress=2&lp_context_asin=B0H2VF6YYB&visitId=457ebece-f9ad-4b44-ab49-02b11cbba1b7&ref_=ast_bln" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="col-span-2 md:col-span-1 bg-white dark:bg-neutral-900 border border-[#ECECEC] dark:border-neutral-800 rounded-2xl p-4 sm:p-6.5 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-[#FF9900] hover:shadow-[0_12px_30px_rgba(255,153,0,0.1)] transition-all duration-300 ease-out group flex flex-col justify-between"

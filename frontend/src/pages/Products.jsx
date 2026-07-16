@@ -442,7 +442,7 @@ export default function Products() {
             </div>
             <div className="shrink-0 w-full md:w-auto text-left">
               <a 
-                href="https://www.amazon.in/" 
+                href="https://www.amazon.in/stores/page/DBE02ED0-DA01-43D4-B559-002662A0E73E?ingress=2&lp_context_asin=B0H2VF6YYB&visitId=457ebece-f9ad-4b44-ab49-02b11cbba1b7&ref_=ast_bln" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="inline-flex items-center gap-2.5 bg-[#FF9900] hover:bg-[#FF9900]/95 text-white font-extrabold uppercase tracking-widest text-xs py-4 px-8 rounded-xl shadow-md transition-all duration-300"
