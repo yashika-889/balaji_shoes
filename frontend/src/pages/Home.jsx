@@ -7,7 +7,7 @@ import ScrollReveal from '../components/ScrollReveal'
 import BlurImage from '../components/BlurImage'
 
 // Asset imports
-import heroImg from '../assets/hero_footwear.webp'
+const heroImg = '/og-image.webp'
 import brandImg from '../assets/brand_lifestyle.webp'
 import menShoes from '../assets/skechon_121.webp'
 import kidsShoes from '../assets/nexa_4.webp'

@@ -128,7 +128,7 @@ export default function Contact() {
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1 sm:gap-0">
                 <span>Mon - Sat</span>
                 <span className="text-primary dark:text-white bg-neutral-100 dark:bg-neutral-800 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded text-[9px] sm:text-[11px] font-bold">
-                  9 AM – 6 PM
+                  9 AM – 8:30 PM
                 </span>
               </div>
             </div>
@@ -145,7 +145,7 @@ export default function Contact() {
               </h3>
               <div className="space-y-1 sm:space-y-2 mt-2 sm:mt-4">
                 <p className="text-[10px] sm:text-sm font-bold text-primary dark:text-neutral-200 truncate">
-                  <a href="mailto:sales@balajishoes.shop" className="hover:text-brand-orange transition-colors">sales@balajishoes.shop</a>
+                  <a href="mailto:shribalaji.indiaofficial@gmail.com" className="hover:text-brand-orange transition-colors">shribalaji.indiaofficial@gmail.com</a>
                 </p>
                 <p className="text-[10px] sm:text-sm font-bold text-primary dark:text-neutral-200 truncate">
                   <a href="mailto:sumitgoel@balajishoes.shop" className="hover:text-brand-orange transition-colors text-[9px] sm:text-sm">sumitgoel@balajishoes.shop</a>
@@ -168,13 +168,13 @@ export default function Contact() {
               </h3>
               <p className="text-[11px] sm:text-sm text-on-surface-variant dark:text-neutral-455 leading-relaxed mt-2 sm:mt-4">
                 Shri Balaji Shoes Private Limited<br />
-                M.I.E. Industrial Area, Part-B,<br />
+                M.I.E. Industrial Area, PLOT NO.647,Part-A,<br />
                 Bahadurgarh, Haryana - 124507
               </p>
             </div>
             <div className="border-t border-[#ECECEC] dark:border-neutral-800 pt-3 sm:pt-4 mt-3 sm:mt-4">
               <a 
-                href="https://www.google.com/maps/dir/?api=1&destination=M.I.E.+Part-B,+Bahadurgarh,+Haryana"
+                href="https://www.google.com/maps/dir/?api=1&destination=M.I.E.+Part-A,+Bahadurgarh,+Haryana"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand-orange hover:text-brand-orange/80 transition-colors font-bold text-xs sm:text-sm flex items-center gap-1 group"
@@ -192,7 +192,7 @@ export default function Contact() {
               Social Proof
             </span>
             <h2 className="font-headline-lg text-2xl sm:text-3xl font-bold text-primary dark:text-white mt-2">
-              Official Online Presence
+              Connect With Us
             </h2>
             <p className="text-sm text-on-surface-variant dark:text-neutral-450 mt-1">
               You can also connect with us through our official brand channels.
@@ -227,10 +227,10 @@ export default function Contact() {
                   </svg>
                 </div>
                 <h3 className="font-bold text-sm sm:text-lg text-primary dark:text-white mb-1.5 sm:mb-2 transition-colors duration-300 group-hover:text-[#E1306C]">
-                  Follow HYCROSS
+                  Follow HYCROSS on Instagram
                 </h3>
                 <p className="text-[10px] sm:text-sm text-on-surface-variant dark:text-neutral-455 leading-relaxed font-normal">
-                  See product launches, behind-the-scenes, and daily styling inspiration.
+                  Discover our latest footwear collections, manufacturing highlights, product launches.
                 </p>
               </div>
               <div className="mt-4 sm:mt-6 flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-orange group-hover:text-[#E1306C] transition-colors duration-300">
@@ -263,10 +263,10 @@ export default function Contact() {
                   </svg>
                 </div>
                 <h3 className="font-bold text-sm sm:text-lg text-primary dark:text-white mb-1.5 sm:mb-2 transition-colors duration-300 group-hover:text-[#1877F2]">
-                  Community Updates
+                  Official Facebook Page
                 </h3>
                 <p className="text-[10px] sm:text-sm text-on-surface-variant dark:text-neutral-455 leading-relaxed font-normal">
-                  Product announcements, offers, and company news.
+                  Stay informed with company announcements, new product releases.
                 </p>
               </div>
               <div className="mt-4 sm:mt-6 flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-orange group-hover:text-[#1877F2] transition-colors duration-300">
@@ -286,14 +286,14 @@ export default function Contact() {
                   <ShoppingBag className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <h3 className="font-bold text-sm sm:text-lg text-primary dark:text-white mb-1.5 sm:mb-2 transition-colors duration-300 group-hover:text-[#FF9900]">
-                  Official Amazon Store
+                  Shop HYCROSS on Amazon
                 </h3>
                 <p className="text-[10px] sm:text-sm text-on-surface-variant dark:text-neutral-455 leading-relaxed font-normal">
                   Explore verified HYCROSS products, customer reviews and latest launches.
                 </p>
               </div>
               <div className="mt-4 sm:mt-6 flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-orange group-hover:text-[#FF9900] transition-colors duration-300">
-                Visit Amazon Store <ArrowRight className="w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 group-hover:translate-x-1 transition-transform" />
+                Shop on Amazon <ArrowRight className="w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 group-hover:translate-x-1 transition-transform" />
               </div>
             </a>
           </div>
@@ -319,14 +319,14 @@ export default function Contact() {
                 <Building className="w-6 h-6" />
               </div>
               <h3 className="font-bold text-xl text-primary dark:text-white">
-                State-of-the-Art Unit
+                Manufacturing Facility
               </h3>
               <p className="text-sm text-on-surface-variant dark:text-neutral-450 leading-relaxed">
                 Our primary manufacturing facility is equipped with modern injection molding technology, ensuring high precision and output for comfort footwear.
               </p>
               <div className="pt-2">
                 <a 
-                  href="https://www.google.com/maps/dir/?api=1&destination=M.I.E.+Part-B,+Bahadurgarh,+Haryana"
+                  href="https://www.google.com/maps/dir/?api=1&destination=M.I.E.+Part-A,+Bahadurgarh,+Haryana"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orange/95 text-white font-extrabold uppercase tracking-widest text-xs py-3.5 px-6 rounded-xl hover:shadow-md transition-all duration-300"
@@ -338,7 +338,7 @@ export default function Contact() {
             <div className="lg:col-span-8 h-80 rounded-xl overflow-hidden border border-[#ECECEC] dark:border-neutral-800">
               <iframe
                 title="Shri Balaji Shoes Factory Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13993.411649987974!2d76.920516!3d28.6940342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390daf848fffffb5%3A0x67396f9bf57dc5b4!2sM.I.E.%20Part-B%252C%20Bahadurgarh%252C%20Haryana!5e0!3m2!1sen!2sin!4v1689254245643!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13993.411649987974!2d76.920516!3d28.6940342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390daf848fffffb5%3A0x67396f9bf57dc5b4!2sM.I.E.%20Part-A%252C%20Bahadurgarh%252C%20Haryana!5e0!3m2!1sen!2sin!4v1689254245643!5m2!1sen!2sin"
                 className="w-full h-full border-0 grayscale dark:invert"
                 allowFullScreen=""
                 loading="lazy"
@@ -593,7 +593,7 @@ export default function Contact() {
 
             {/* Email */}
             <a 
-              href="mailto:sales@balajishoes.shop"
+              href="mailto:shribalaji.indiaofficial@gmail.com"
               className="bg-white dark:bg-neutral-900 border border-[#ECECEC] dark:border-neutral-800 rounded-2xl p-5 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:border-brand-orange hover:shadow-md transition-all duration-300 ease-out flex items-center justify-center gap-3 text-sm font-bold text-primary dark:text-white"
             >
               <Mail className="w-5 h-5 text-brand-orange shrink-0" />
